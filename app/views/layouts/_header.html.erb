@@ -1,0 +1,105 @@
+<header role="banner">
+  <!-- Site Logo -->
+  <div id="logo" data-0="opacity: 1;" data-top-bottom="opacity: 0;" data-anchor-target="#logo"></div>
+  <div id="title_wrapper">
+    <!-- Site Title -->
+    <h1 id="site_title" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_title">
+      Shepherd's Hut Market
+    </h1>
+
+    <!-- Site Slogan -->
+    <h2 id="site_slogan" data-0="opacity: 1; top:0px;" data-600="opacity: 0; top: 80px;" data-anchor-target="#site_slogan"></h2>
+    <!-- Scroll down button -->
+    <div id="scroll_down_button" data-0="opacity: 1; top:0px;" data-400="opacity: 0; top: 100px;" data-anchor-target="#scroll_down_button">
+      <i class="fa fa-angle-down"></i>
+    </div>
+  </div>
+				
+  <!-- Top level navigation -->
+  <div id="navigation_bar">
+    <div class="row site_width">
+      <div class="large-12 columns">
+        <nav id="top_navigation"><ul><li><a href="../" rel="">Welcome</a></li><li><a href="/products.html" rel="" id="current">Products</a></li><li><a href="/about.html" rel="">About Us</a></li><li><a href="/contact.html" rel="">Contact</a></li></ul></nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<% unless @subcategories.nil? %>
+  <!-- Sub-navigation -->
+  <div id="sub_navigation_bar">
+    <div class="row site_width">
+      <div class="large-12 columns">
+        <nav id="sub_navigation">
+          <ul><li><ul>
+            <% @subcategories.each do |s| %>
+              <li><a href="<%= s.path unless s.path.nil? %>" rel=""><%= s.title %></a></li>
+            <% end %>
+          </ul></li></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<!-- Mobile Navigation -->
+<div id="mobile_navigation_toggle">
+  <i id="mobile_navigation_toggle_icon" class="fa fa-bars"></i>
+</div>
+<nav id="mobile_navigation">
+  <ul>
+    <li><a href="./" rel="">Welcome</a></li>
+    <li><a href="products.html" rel="" id="current" class="parent">Products</a>
+  </ul>
+  <ul>
+    <% @subcategories.each do |s| %>
+      <li><a href="<%= s.path unless s.path.nil? %>" rel=""><%= s.title %></a></li>
+    <% end %>
+  </ul>
+  <ul>
+    </li><li><a href="about.html" rel="">About Us</a></li>
+    <li><a href="contact.html" rel="">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Main Content area and sidebar -->
+<div class="row site_width" id="container">
+  <section id="content"class="large-8 columns"></section>
+  <aside id="sidebar" class="large-4 columns">
+    <!-- Sidebar content -->
+    <h4 id="sidebar_title"></h4>
+    <div id="sidebar_content"></div>
+    <div id="archives"></div>
+  </aside>
+</div>
+
+<main class="page-content" aria-label="Content">
+  <div id="main">
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="row site_width">
+  <div id="footer_content" class="large-12 columns">
+    <div id="breadcrumb_container">
+      <i class="fa fa-folder-open-o"></i> <span id="breadcrumb"></span>
+    </div>
+
+    &copy; 2018 Shepherd's Hut Market <a href="#" id="rw_email_contact">Contact Us</a><script type="text/javascript">var _rwObsfuscatedHref0 = "mai";var _rwObsfuscatedHref1 = "lto";var _rwObsfuscatedHref2 = ":je";var _rwObsfuscatedHref3 = "key";var _rwObsfuscatedHref4 = "ser";var _rwObsfuscatedHref5 = "@me";var _rwObsfuscatedHref6 = "tro";var _rwObsfuscatedHref7 = "cas";var _rwObsfuscatedHref8 = "t.n";var _rwObsfuscatedHref9 = "et";var _rwObsfuscatedHref = _rwObsfuscatedHref0+_rwObsfuscatedHref1+_rwObsfuscatedHref2+_rwObsfuscatedHref3+_rwObsfuscatedHref4+_rwObsfuscatedHref5+_rwObsfuscatedHref6+_rwObsfuscatedHref7+_rwObsfuscatedHref8+_rwObsfuscatedHref9; document.getElementById("rw_email_contact").href = _rwObsfuscatedHref;</script>
+  </div>
+</footer>
+
+<!-- Scroll up button -->
+<div id="scroll_up_button"><i class="fa fa-angle-up"></i></div>
+<script>
+  $elixir(window).load(function() {
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+      skrollr.init({
+        forceHeight: false
+      });
+    }
+  });
+</script>
