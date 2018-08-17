@@ -14,3 +14,67 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo{
+  height:0% !important;
+}
+
+#title_wrapper{
+  top: 0% !important;
+}
+
+figure > img {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  perspective: 1500px;
+}
+
+header[role="banner"]{
+  height: 25%;
+  background-image: url(https://shepherdshutmarket.com/resources/banner.jpg) !important;
+}
+
+.product-description{
+  width: 50%;
+  padding: 25px;
+  margin: 25px;
+  background-color: #CFD8DC;
+  font-size: 20px;
+}
+
+.product-details, .product-reviews{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-reviews{
+  flex-direction: column;
+  h3 {
+    font-weight: bold;
+  }
+}
+
+.products{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+}
+
+.product:hover{
+  background-color: #CFD8DC;
+}

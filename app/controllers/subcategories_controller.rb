@@ -1,3 +1,4 @@
+# Subcategories Scaffold Controller
 class SubcategoriesController < ApplicationController
   before_action :set_subcategory, only: %i[show edit update destroy]
 

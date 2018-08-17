@@ -1,0 +1,27 @@
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/test_helper.rb'
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'app/helpers/application_helper.rb'
+    - 'app/helpers/categories_helper.rb'
+    - 'app/helpers/products_helper.rb'
+    - 'app/helpers/subcategories_helper.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/models/application_record.rb'
+    - 'config/application.rb'
+    - 'db/migrate/20180817005632_create_categories.rb'
+    - 'db/migrate/20180817010058_create_products.rb'
+    - 'db/migrate/20180817011709_create_subcategories.rb'
+    - 'db/migrate/20180817015341_add_path_to_subcategories.rb'
+
+Style/MixinUsage:
+  Exclude:
+    - 'bin/setup'
+    - 'bin/update'
+
+Metrics/LineLength:
+  Max: 137
