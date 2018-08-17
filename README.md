@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the code used to run shepherdshutmarket.com product pages
 
-Things you may want to cover:
+* Ruby version: Version 3.12.0 (ruby 2.3.7-p456), codename: Llamas in Pajamas
 
-* Ruby version
+* Currently using internal DB
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Features to be added:
+  - Disable Changes via External Site
+  - New Categories
+  - Migrate about, contact, etc pages
