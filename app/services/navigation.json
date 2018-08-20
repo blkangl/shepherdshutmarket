@@ -1,0 +1,12 @@
+{
+  "wool" : [
+    { "name" : "Roving", "path" : "/wool/roving" },
+    { "name" : "Yarn", "path" : "/wool/yarn" }
+  ],
+
+  "food" : [
+    { "name" : "Lamb", "path" : "/food/lamb" },
+    { "name" : "Eggs", "path" : "/food/eggs" },
+    { "name" : "Maple Syrup", "path" : "/food/maplesyrup" }
+  ]
+}

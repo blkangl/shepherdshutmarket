@@ -1,0 +1,42 @@
+{ 
+  "Food Products" : {
+    "Lamb" : {
+      "image" : "https://shepherdshutmarket.com/images/products/lamb.png",
+      "products" : [
+        { "name" : "Ground Lamb", "price" : "$10.50/lb" },
+        { "name" : "Kabob", "price" : "$14.00/lb" },
+        { "name" : "Leg of Lamb (boneless)", "price" : "$13.00/lb" },
+        { "name" : "Leg Steaks", "price" : "$14.00/lb" },
+        { "name" : "Loin / Sirloin Chops", "price" : "$16.00/lb" },
+        { "name" : "Loin Roast", "price" : "$16.00/lb" },
+        { "name" : "Rack of lamb", "price" : "$14.00/lb" },
+        { "name" : "Rib Chops", "price" : "$15.00/lb" },
+        { "name" : "Sausage – Breakfast", "price" : "$14.50/lb" },
+        { "name" : "Shanks", "price" : "$10.50/lb" },
+        { "name" : "Shoulder Chops – blade or round", "price" : "$11.00/lb" },
+        { "name" : "Shoulder Roast", "price" : "$10.50/lb" },
+        { "name" : "Stew Meat", "price" : "$11.00/lb" }
+      ]
+    }
+  },
+
+  "Wool Products" : {
+    "Roving" : { 
+      "image" : "https://shepherdshutmarket.com/images/products/...",
+      "gallery" : "wool_roving",
+      "products" : [
+
+      ]
+    },
+ 
+    "Yarn" : { 
+      "image" : "https://shepherdshutmarket.com/images/products/...",
+      "gallery" : "wool_yarn",
+      "description" : "I’ve been spinning for about five years now.  Every fiber I touch becomes like a great friend.   Whether blending fibers such as silk, mixed wool, alpaca, bling, Targhee or many other fibers, or spinning Targhee, or demonstrating the craft to school children, spinning has become an absolute necessity for the Shepherd’s Hut Market and my sanity.  What was once hard has become enjoyable.  Now I have the pleasure of making hand spun yarn an important part of what this business is.  Please come in and see the yarn, and see how it is made!",
+      "products" : [
+        { "name" : "Natural & Brown", "price" : "$3/oz" },
+        { "name" : "Dyed Colors", "price" : "$3.50/oz" }
+      ]
+    }
+  }
+}

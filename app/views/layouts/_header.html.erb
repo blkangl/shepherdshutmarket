@@ -14,62 +14,9 @@
       <i class="fa fa-angle-down"></i>
     </div>
   </div>
-				
-  <!-- Top level navigation -->
-  <div id="navigation_bar">
-    <div class="row site_width">
-      <div class="large-12 columns">
-        <nav id="top_navigation"><ul><li><a href="../" rel="">Welcome</a></li><li><a href="/products.html" rel="" id="current">Products</a></li><li><a href="/about.html" rel="">About Us</a></li><li><a href="/contact.html" rel="">Contact</a></li></ul></nav>
-      </div>
-    </div>
-  </div>
 </header>
 
-<% unless @subcategories.nil? %>
-  <!-- Sub-navigation -->
-  <div id="sub_navigation_bar">
-    <div class="row site_width">
-      <div class="large-12 columns">
-        <nav id="sub_navigation">
-          <ul><li><ul>
-            <% @subcategories.each do |s| %><li><a href="<%= s.path unless s.path.nil? %>" rel=""><%= s.title %></a></li><% end %>
-          </ul></li></ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-<% end %>
-
-<!-- Mobile Navigation -->
-<div id="mobile_navigation_toggle">
-  <i id="mobile_navigation_toggle_icon" class="fa fa-bars"></i>
-</div>
-<nav id="mobile_navigation">
-  <ul>
-    <li><a href="./" rel="">Welcome</a></li>
-    <li><a href="products.html" rel="" id="current" class="parent">Products</a>
-  </ul>
-  <ul>
-    <% @subcategories.each do |s| %>
-      <li><a href="<%= s.path unless s.path.nil? %>" rel=""><%= s.title %></a></li>
-    <% end %>
-  </ul>
-  <ul>
-    </li><li><a href="about.html" rel="">About Us</a></li>
-    <li><a href="contact.html" rel="">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- Main Content area and sidebar -->
-<div class="row site_width" id="container">
-  <section id="content"class="large-8 columns"></section>
-  <aside id="sidebar" class="large-4 columns">
-    <!-- Sidebar content -->
-    <h4 id="sidebar_title"></h4>
-    <div id="sidebar_content"></div>
-    <div id="archives"></div>
-  </aside>
-</div>
+<%= render "layouts/products" %>
 
 <main class="page-content" aria-label="Content">
   <div id="main">

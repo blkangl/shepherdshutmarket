@@ -1,1 +1,1296 @@
 
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 20:30:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/wool/roving"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/subcategories" for 127.0.0.1 at 2018-08-19 20:30:21 -0400
+Processing by SubcategoriesController#index as HTML
+  Rendering subcategories/index.html.erb within layouts/application
+  [1m[36mSubcategory Load (4.3ms)[0m  [1m[34mSELECT "subcategories".* FROM "subcategories"[0m
+  Rendered subcategories/index.html.erb within layouts/application (64.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 310ms (Views: 291.7ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 20:34:04 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (6.9ms)
+Completed 500 Internal Server Error in 457ms
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    50:     <li><a href="products.html" rel="" id="current" class="parent">Products</a>
+    51:   </ul>
+    52:   <ul>
+    53:     <% @subcategories.each do |s| %>
+    54:       <li><a href="<%= s.path unless s.path.nil? %>" rel=""><%= s.title %></a></li>
+    55:     <% end %>
+    56:   </ul>
+  
+app/views/layouts/_header.html.erb:53:in `_app_views_layouts__header_html_erb__2249987900073669491_70344190336560'
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__3860840679475255532_70344205960240'
+Started GET "/subcategories" for 127.0.0.1 at 2018-08-19 20:34:11 -0400
+Processing by SubcategoriesController#index as HTML
+  Rendering subcategories/index.html.erb within layouts/application
+  [1m[36mSubcategory Load (5.1ms)[0m  [1m[34mSELECT "subcategories".* FROM "subcategories"[0m
+  Rendered subcategories/index.html.erb within layouts/application (60.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 359ms (Views: 272.3ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 20:35:42 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (9.3ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    50:     <li><a href="products.html" rel="" id="current" class="parent">Products</a>
+    51:   </ul>
+    52:   <ul>
+    53:     <% @subcategories.each do |s| %>
+    54:       <li><a href="<%= s.path unless s.path.nil? %>" rel=""><%= s.title %></a></li>
+    55:     <% end %>
+    56:   </ul>
+  
+app/views/layouts/_header.html.erb:53:in `_app_views_layouts__header_html_erb__2249987900073669491_70344203851920'
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__3860840679475255532_70344179494120'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 20:37:40 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 109ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2018-08-19 20:38:23 -0400
+Processing by SubcategoriesController#index as HTML
+  Rendering subcategories/index.html.erb within layouts/application
+  [1m[36mSubcategory Load (4.1ms)[0m  [1m[34mSELECT "subcategories".* FROM "subcategories"[0m
+  Rendered subcategories/index.html.erb within layouts/application (23.1ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 520ms (Views: 501.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/subcategories" for 127.0.0.1 at 2018-08-19 20:38:27 -0400
+Processing by SubcategoriesController#index as HTML
+  Rendering subcategories/index.html.erb within layouts/application
+  [1m[36mSubcategory Load (0.2ms)[0m  [1m[34mSELECT "subcategories".* FROM "subcategories"[0m
+  Rendered subcategories/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 90ms (Views: 86.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:06:35 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (6.1ms)
+Completed 500 Internal Server Error in 412ms
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    25:   </div>
+    26: </header>
+    27: 
+    28: <% unless @products[''] %>
+    29:   <!-- Sub-navigation -->
+    30:   <div id="sub_navigation_bar">
+    31:     <div class="row site_width">
+  
+app/views/layouts/_header.html.erb:28:in `_app_views_layouts__header_html_erb__2249987900073669491_70344200641240'
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__3860840679475255532_70344163975660'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:07:01 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 126ms (Views: 123.2ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:12:08 -0400
+  
+SyntaxError (/Users/blkangl/Code/keyser/shepherdshutmarket/app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+  before_filter: hashes
+                ^):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+app/controllers/wool_controller.rb:1:in `<top (required)>'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:12:21 -0400
+  
+SyntaxError (/Users/blkangl/Code/keyser/shepherdshutmarket/app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+  before_filter: :hashes
+                ^):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+app/controllers/wool_controller.rb:1:in `<top (required)>'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:12:47 -0400
+Processing by WoolController#roving as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+JSON::ParserError (419: unexpected token at '{ 
+        "name" : "Roving",
+        "image" : "https://shepherdshutmarket.com/images/products/..."
+        "gallery" : "wool_roving",
+        "products" : [
+
+        ]
+      },
+      { 
+        "name" : "Yarn",
+        "image" : "https://shepherdshutmarket.com/images/products/..."
+        "gallery" : "wool_yarn",
+        "description: "I’ve been spinning for about five years now.  Every fiber I touch becomes like a great friend.   Whether blending fibers such as silk, mixed wool, alpaca, bling, Targhee or many other fibers, or spinning Targhee, or demonstrating the craft to school children, spinning has become an absolute necessity for the Shepherd’s Hut Market and my sanity.  What was once hard has become enjoyable.  Now I have the pleasure of making hand spun yarn an important part of what this business is.  Please come in and see the yarn, and see how it is made!"
+        "products" : [
+          { "name" : "Natural & Brown", "price" : "$3/oz" },
+          { "name" : "Dyed Colors", "price" : "$3.50/oz" }
+        ]
+      }, 
+    ]
+  }
+]
+'):
+  
+app/controllers/application_controller.rb:9:in `hashes'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:13:47 -0400
+Processing by WoolController#roving as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+JSON::ParserError (419: unexpected token at '{ 
+        "name" : "Roving",
+        "image" : "https://shepherdshutmarket.com/images/products/..."
+        "gallery" : "wool_roving",
+        "products" : [
+
+        ]
+      },
+      { 
+        "name" : "Yarn",
+        "image" : "https://shepherdshutmarket.com/images/products/..."
+        "gallery" : "wool_yarn",
+        "description" : "I’ve been spinning for about five years now.  Every fiber I touch becomes like a great friend.   Whether blending fibers such as silk, mixed wool, alpaca, bling, Targhee or many other fibers, or spinning Targhee, or demonstrating the craft to school children, spinning has become an absolute necessity for the Shepherd’s Hut Market and my sanity.  What was once hard has become enjoyable.  Now I have the pleasure of making hand spun yarn an important part of what this business is.  Please come in and see the yarn, and see how it is made!"
+        "products" : [
+          { "name" : "Natural & Brown", "price" : "$3/oz" },
+          { "name" : "Dyed Colors", "price" : "$3.50/oz" }
+        ]
+      }, 
+    ]
+  }
+]
+'):
+  
+app/controllers/application_controller.rb:9:in `hashes'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:14:03 -0400
+Processing by WoolController#roving as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+JSON::ParserError (419: unexpected token at '{ 
+        "name" : "Roving",
+        "image" : "https://shepherdshutmarket.com/images/products/..."
+        "gallery" : "wool_roving",
+        "products" : [
+
+        ]
+      },
+      { 
+        "name" : "Yarn",
+        "image" : "https://shepherdshutmarket.com/images/products/...",
+        "gallery" : "wool_yarn",
+        "description" : "I’ve been spinning for about five years now.  Every fiber I touch becomes like a great friend.   Whether blending fibers such as silk, mixed wool, alpaca, bling, Targhee or many other fibers, or spinning Targhee, or demonstrating the craft to school children, spinning has become an absolute necessity for the Shepherd’s Hut Market and my sanity.  What was once hard has become enjoyable.  Now I have the pleasure of making hand spun yarn an important part of what this business is.  Please come in and see the yarn, and see how it is made!"
+        "products" : [
+          { "name" : "Natural & Brown", "price" : "$3/oz" },
+          { "name" : "Dyed Colors", "price" : "$3.50/oz" }
+        ]
+      }, 
+    ]
+  }
+]
+'):
+  
+app/controllers/application_controller.rb:9:in `hashes'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:15:14 -0400
+Processing by WoolController#roving as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+JSON::ParserError (419: unexpected token at '{ 
+        "name" : "Roving",
+        "image" : "https://shepherdshutmarket.com/images/products/..."
+        "gallery" : "wool_roving",
+        "products" : [
+
+        ]
+      },
+      { 
+        "name" : "Yarn",
+        "image" : "https://shepherdshutmarket.com/images/products/...",
+        "gallery" : "wool_yarn",
+        "description" : "I’ve been spinning for about five years now.  Every fiber I touch becomes like a great friend.   Whether blending fibers such as silk, mixed wool, alpaca, bling, Targhee or many other fibers, or spinning Targhee, or demonstrating the craft to school children, spinning has become an absolute necessity for the Shepherd’s Hut Market and my sanity.  What was once hard has become enjoyable.  Now I have the pleasure of making hand spun yarn an important part of what this business is.  Please come in and see the yarn, and see how it is made!",
+        "products" : [
+          { "name" : "Natural & Brown", "price" : "$3/oz" },
+          { "name" : "Dyed Colors", "price" : "$3.50/oz" }
+        ]
+      }
+    ]
+  }
+]
+'):
+  
+app/controllers/application_controller.rb:9:in `hashes'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:15:24 -0400
+Processing by WoolController#roving as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - app/services/nav.json):
+  
+app/controllers/application_controller.rb:11:in `read'
+app/controllers/application_controller.rb:11:in `hashes'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:15:45 -0400
+Processing by WoolController#roving as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+JSON::ParserError (784: unexpected token at '{
+  "wool" : [
+    { "name" : "Roving", "path" : "/wool/roving" },
+    { "name" : "Yarn", "path" : "/wool/yarn" }
+  ]
+
+  "food" : [
+    { "name" : "Lamb", "path" : "/food/lamb" },
+    { "name" : "Eggs", "path" : "/food/eggs" },
+    { "name" : "Maple Syrup", "path" : "/food/maplesyrup" }
+  ]
+}
+'):
+  
+app/controllers/application_controller.rb:12:in `hashes'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:16:21 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+Completed 500 Internal Server Error in 99ms
+
+
+  
+ActionView::Template::Error (undefined method `title' for {"name"=>"Roving", "path"=>"/wool/roving"}:Hash):
+    32:       <div class="large-12 columns">
+    33:         <nav id="sub_navigation">
+    34:           <ul><li><ul>
+    35:             <% @nav[controller_name].each do |s| %><li><a href="<%= s['path'] unless s['path'].nil? %>" rel=""><%= s.title %></a></li><% end %>
+    36:           </ul></li></ul>
+    37:         </nav>
+    38:       </div>
+  
+app/views/layouts/_header.html.erb:35:in `block in _app_views_layouts__header_html_erb__2249987900073669491_70344199839020'
+app/views/layouts/_header.html.erb:35:in `each'
+app/views/layouts/_header.html.erb:35:in `_app_views_layouts__header_html_erb__2249987900073669491_70344199839020'
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__3860840679475255532_70344187652900'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:17:15 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 98ms (Views: 93.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-19 21:17:22 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (5.5ms)
+Completed 200 OK in 16ms (Views: 10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-19 21:17:23 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (5.7ms)
+Completed 200 OK in 20ms (Views: 10.5ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:17:29 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 90ms (Views: 85.4ms)
+
+
+Started GET "/about.html" for 127.0.0.1 at 2018-08-19 21:17:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/about.html"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:17:32 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 416ms (Views: 406.4ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:17:35 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 125ms (Views: 118.5ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:17:41 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 98ms (Views: 94.6ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:17:43 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 137ms (Views: 134.5ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:17:46 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 166ms (Views: 161.5ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:17:47 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 129ms (Views: 124.7ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:17:49 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 146ms (Views: 142.0ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:18:27 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 96ms (Views: 88.2ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:19:48 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 326ms (Views: 317.4ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:19:49 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 262ms (Views: 254.1ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:19:50 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+Completed 200 OK in 214ms (Views: 209.9ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:19:51 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 271ms (Views: 266.5ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:19:54 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 236ms (Views: 230.6ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:19:55 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 140ms (Views: 135.5ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:19:58 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 116ms (Views: 112.8ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:21:25 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (38.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 201ms (Views: 177.8ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:21:26 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 159ms (Views: 153.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-19 21:21:27 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (9.9ms)
+Completed 200 OK in 27ms (Views: 19.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-19 21:21:27 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (7.9ms)
+Completed 200 OK in 20ms (Views: 13.8ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:21:35 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 86ms (Views: 80.8ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:22:15 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 99ms (Views: 94.9ms)
+
+
+Started GET "/wool/yarn" for 127.0.0.1 at 2018-08-19 21:22:16 -0400
+Processing by WoolController#yarn as HTML
+  Rendering wool/yarn.html.erb within layouts/application
+  Rendered wool/yarn.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 144ms (Views: 139.3ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:22:18 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 136ms (Views: 131.3ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:22:50 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 363ms (Views: 349.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:22:51 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 89.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:27:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (8.6ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial products/_products.html.erb, application/_products.html.erb with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/blkangl/Code/keyser/shepherdshutmarket/app/views"
+):
+    19:   <div id="navigation_bar">
+    20:     <div class="row site_width">
+    21:       <div class="large-12 columns">
+    22:         <nav id="top_navigation"><ul><li style="width: 25%"><a href="../" rel="">Welcome</a></li><% render "products.html.erb" %><li style="width: 25%"><a href="/products.html" rel="" id="current">Products</a></li><li style="width: 25%"><a href="/about.html" rel="">About Us</a></li><li style="width: 25%"><a href="/contact.html" rel="">Contact</a></li></ul></nav>
+    23:       </div>
+    24:     </div>
+    25:   </div>
+  
+app/views/layouts/_header.html.erb:22:in `_app_views_layouts__header_html_erb__2249987900073669491_70344141744220'
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__3860840679475255532_70344131071020'
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:27:24 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_products.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/blkangl/Code/keyser/shepherdshutmarket/app/views/layouts/_products.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/blkangl/Code/keyser/shepherdshutmarket/app/views/layouts/_products.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/layouts/_products.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/layouts/_products.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/layouts/_header.html.erb:22:in `_app_views_layouts__header_html_erb__2249987900073669491_70344197798300'
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__3860840679475255532_70344198352460'
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:27:47 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_products.html.erb (3.3ms)
+  Rendered layouts/_header.html.erb (7.0ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    3:     Food Products
+    4:   </a>
+    5:   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    6:     <% @products['food'].each do |p| %>
+    7:       <a class="dropdown-item" href="<%= p['path'] %>"><%= p['name'] %></a>
+    8:     <% end %>
+    9:   </div>
+  
+app/views/layouts/_products.html.erb:6:in `_app_views_layouts__products_html_erb__127213796150304467_70344188423980'
+app/views/layouts/_header.html.erb:22:in `_app_views_layouts__header_html_erb__2249987900073669491_70344191533100'
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__3860840679475255532_70344135755880'
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:28:10 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_products.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+Completed 200 OK in 120ms (Views: 115.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:28:49 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_products.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 101ms (Views: 95.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:31:47 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (22.7ms)
+  Rendered layouts/_products.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 256ms (Views: 234.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:32:56 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_products.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (6.3ms)
+Completed 200 OK in 208ms (Views: 203.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:33:13 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_products.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+Completed 200 OK in 117ms (Views: 112.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:33:18 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_products.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:33:29 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_products.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 110ms (Views: 106.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:34:29 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_products.html.erb (0.7ms)
+  Rendered layouts/_products.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (8.8ms)
+Completed 200 OK in 134ms (Views: 126.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:36:57 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_products.html.erb (0.8ms)
+  Rendered layouts/_products.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (7.9ms)
+Completed 200 OK in 129ms (Views: 120.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:38:01 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_products.html.erb (0.7ms)
+  Rendered layouts/_products.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (7.2ms)
+Completed 200 OK in 123ms (Views: 117.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:38:05 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_products.html.erb (1.8ms)
+  Rendered layouts/_products.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (10.8ms)
+Completed 200 OK in 535ms (Views: 356.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:38:58 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_products.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (5.8ms)
+Completed 200 OK in 125ms (Views: 120.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:39:16 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_products.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (6.3ms)
+Completed 200 OK in 103ms (Views: 97.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wool/roving" for 127.0.0.1 at 2018-08-19 21:39:20 -0400
+Processing by WoolController#roving as HTML
+  Rendering wool/roving.html.erb within layouts/application
+  Rendered wool/roving.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_products.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 514ms (Views: 508.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:39:24 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_products.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:40:29 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_products.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 2215ms (Views: 2208.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:40:53 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_products.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (4.2ms)
+Completed 200 OK in 2294ms (Views: 2290.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:42:14 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_products.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 2151ms (Views: 2145.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:44:02 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_products.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (5.6ms)
+Completed 200 OK in 2292ms (Views: 2285.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:45:51 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_products.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 2304ms (Views: 2294.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:46:46 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_products.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (5.8ms)
+Completed 200 OK in 119ms (Views: 112.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:46:54 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_products.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+Completed 200 OK in 102ms (Views: 96.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:47:12 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_products.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 100ms (Views: 94.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:51:17 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_products.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+Completed 200 OK in 98ms (Views: 92.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:52:10 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_products.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+Completed 200 OK in 113ms (Views: 105.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.html" for 127.0.0.1 at 2018-08-19 21:53:25 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_products.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+Completed 200 OK in 2362ms (Views: 2355.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 21:55:52 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_products.html.erb (1.5ms)
+  Rendered layouts/_header.html.erb (10.0ms)
+Completed 200 OK in 240ms (Views: 208.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 21:57:11 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_products.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 139ms (Views: 133.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 21:58:19 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_products.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 109ms (Views: 104.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 21:59:01 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_products.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+Completed 200 OK in 99ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 21:59:09 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_products.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 98ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 21:59:15 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_products.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+Completed 200 OK in 163ms (Views: 158.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 21:59:20 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_products.html.erb (2.1ms)
+  Rendered layouts/_header.html.erb (7.6ms)
+Completed 200 OK in 143ms (Views: 139.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:05:01 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_products.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/blkangl/Code/keyser/shepherdshutmarket/app/views/layouts/_products.html.erb:7: syntax error, unexpected ')', expecting keyword_end
+..._name == "home" then "active" );@output_buffer.safe_append='...
+...                               ^
+/Users/blkangl/Code/keyser/shepherdshutmarket/app/views/layouts/_products.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/blkangl/Code/keyser/shepherdshutmarket/app/views/layouts/_products.html.erb:36: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/layouts/_products.html.erb:7: syntax error, unexpected ')', expecting keyword_end
+app/views/layouts/_products.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/layouts/_products.html.erb:36: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_header.html.erb:19:in `_app_views_layouts__header_html_erb__2249987900073669491_70344200167180'
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__3860840679475255532_70344179350060'
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:07:15 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_products.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 102ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:08:44 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_products.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+Completed 200 OK in 123ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:17:19 -0400
+Processing by FoodController#lamb as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (784: unexpected token at '{ 
+  "Food Products" : {
+    "Lamb" : {
+        "image" : "https://shepherdshutmarket.com/images/products/lamb.png",
+        "products" : [
+          { "name" : "Ground Lamb", "price" : "$10.50/lb" },
+          { "name" : "Kabob", "price" : "$14.00/lb" }
+        ]
+      }
+    ]
+  },
+
+  "Wool Products" : {
+    { 
+      "name" : "Roving",
+      "image" : "https://shepherdshutmarket.com/images/products/...",
+      "gallery" : "wool_roving",
+      "products" : [
+
+      ]
+    },
+ 
+    { 
+      "name" : "Yarn",
+      "image" : "https://shepherdshutmarket.com/images/products/...",
+      "gallery" : "wool_yarn",
+      "description" : "I’ve been spinning for about five years now.  Every fiber I touch becomes like a great friend.   Whether blending fibers such as silk, mixed wool, alpaca, bling, Targhee or many other fibers, or spinning Targhee, or demonstrating the craft to school children, spinning has become an absolute necessity for the Shepherd’s Hut Market and my sanity.  What was once hard has become enjoyable.  Now I have the pleasure of making hand spun yarn an important part of what this business is.  Please come in and see the yarn, and see how it is made!",
+      "products" : [
+        { "name" : "Natural & Brown", "price" : "$3/oz" },
+        { "name" : "Dyed Colors", "price" : "$3.50/oz" }
+      ]
+    }
+  }
+}
+'):
+  
+app/controllers/application_controller.rb:9:in `hashes'
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:18:39 -0400
+Processing by FoodController#lamb as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (784: unexpected token at '{ 
+  "Food Products" : {
+    "Lamb" : {
+        "image" : "https://shepherdshutmarket.com/images/products/lamb.png",
+        "products" : [
+          { "name" : "Ground Lamb", "price" : "$10.50/lb" },
+          { "name" : "Kabob", "price" : "$14.00/lb" }
+        ]
+      }
+    ]
+  },
+
+  "Wool Products" : {
+    { 
+      "name" : "Roving",
+      "image" : "https://shepherdshutmarket.com/images/products/...",
+      "gallery" : "wool_roving",
+      "products" : [
+
+      ]
+    },
+ 
+    { 
+      "name" : "Yarn",
+      "image" : "https://shepherdshutmarket.com/images/products/...",
+      "gallery" : "wool_yarn",
+      "description" : "I’ve been spinning for about five years now.  Every fiber I touch becomes like a great friend.   Whether blending fibers such as silk, mixed wool, alpaca, bling, Targhee or many other fibers, or spinning Targhee, or demonstrating the craft to school children, spinning has become an absolute necessity for the Shepherd’s Hut Market and my sanity.  What was once hard has become enjoyable.  Now I have the pleasure of making hand spun yarn an important part of what this business is.  Please come in and see the yarn, and see how it is made!",
+      "products" : [
+        { "name" : "Natural & Brown", "price" : "$3/oz" },
+        { "name" : "Dyed Colors", "price" : "$3.50/oz" }
+      ]
+    }
+  }
+}
+'):
+  
+app/controllers/application_controller.rb:9:in `hashes'
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:21:53 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_products.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 114ms (Views: 109.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:25:42 -0400
+Processing by FoodController#lamb as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+JSON::ParserError (419: unexpected token at '{ "name" : "Leg of Lamb (boneless)", "price" : "$13.00/lb" },
+        { "name" : "Leg Steaks", "price" : "$14.00/lb" },
+        { "name" : "Loin / Sirloin Chops", "price" : "$16.00/lb" },
+        { "name" : "Loin Roast", "price" : "$16.00/lb" },
+        { "name" : "Rack of lamb", "price" : "$14.00/lb" },
+        { "name" : "Rib Chops", "price" : "$15.00/lb" },
+        { "name" : "Sausage – Breakfast", "price" : "$14.50/lb" },
+        { "name" : "Shanks", "price" : "$10.50/lb" },
+        { "name" : "Shoulder Chops – blade or round", "price" : "$11.00/lb" },
+        { "name" : "Shoulder Roast", "price" : "$10.50/lb" },
+        { "name" : "Stew Meat", "price" : "$11.00/lb" }
+      ]
+    }
+  },
+
+  "Wool Products" : {
+    "Roving" : { 
+      "image" : "https://shepherdshutmarket.com/images/products/...",
+      "gallery" : "wool_roving",
+      "products" : [
+
+      ]
+    },
+ 
+    "Yarn" : { 
+      "image" : "https://shepherdshutmarket.com/images/products/...",
+      "gallery" : "wool_yarn",
+      "description" : "I’ve been spinning for about five years now.  Every fiber I touch becomes like a great friend.   Whether blending fibers such as silk, mixed wool, alpaca, bling, Targhee or many other fibers, or spinning Targhee, or demonstrating the craft to school children, spinning has become an absolute necessity for the Shepherd’s Hut Market and my sanity.  What was once hard has become enjoyable.  Now I have the pleasure of making hand spun yarn an important part of what this business is.  Please come in and see the yarn, and see how it is made!",
+      "products" : [
+        { "name" : "Natural & Brown", "price" : "$3/oz" },
+        { "name" : "Dyed Colors", "price" : "$3.50/oz" }
+      ]
+    }
+  }
+}
+'):
+  
+app/controllers/application_controller.rb:9:in `hashes'
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:26:20 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_products.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 114ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:26:56 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_products.html.erb (2.2ms)
+  Rendered layouts/_header.html.erb (7.9ms)
+Completed 200 OK in 189ms (Views: 183.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:27:13 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_products.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 153ms (Views: 148.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:27:32 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_products.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 131ms (Views: 126.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:27:49 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_products.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+Completed 200 OK in 117ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:29:46 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (85.3ms)
+  Rendered layouts/_products.html.erb (8.0ms)
+  Rendered layouts/_header.html.erb (27.4ms)
+Completed 200 OK in 2651ms (Views: 2416.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:30:14 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_products.html.erb (11.1ms)
+  Rendered layouts/_header.html.erb (30.4ms)
+Completed 200 OK in 884ms (Views: 863.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:32:02 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_products.html.erb (4.9ms)
+  Rendered layouts/_header.html.erb (24.2ms)
+Completed 200 OK in 891ms (Views: 867.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:34:05 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_products.html.erb (8.0ms)
+  Rendered layouts/_header.html.erb (24.1ms)
+Completed 200 OK in 659ms (Views: 638.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:36:06 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_products.html.erb (3.8ms)
+  Rendered layouts/_header.html.erb (18.8ms)
+Completed 200 OK in 667ms (Views: 650.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:36:43 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_products.html.erb (3.2ms)
+  Rendered layouts/_header.html.erb (17.4ms)
+Completed 200 OK in 496ms (Views: 479.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:37:14 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_products.html.erb (3.0ms)
+  Rendered layouts/_header.html.erb (15.5ms)
+Completed 200 OK in 446ms (Views: 427.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:38:09 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_products.html.erb (2.2ms)
+  Rendered layouts/_header.html.erb (16.3ms)
+Completed 200 OK in 394ms (Views: 382.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/lamb" for 127.0.0.1 at 2018-08-19 22:38:41 -0400
+Processing by FoodController#lamb as HTML
+  Rendering food/lamb.html.erb within layouts/application
+  Rendered food/lamb.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_products.html.erb (2.1ms)
+  Rendered layouts/_header.html.erb (15.2ms)
+Completed 200 OK in 456ms (Views: 442.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food/eggs" for 127.0.0.1 at 2018-08-19 22:39:45 -0400
+Processing by FoodController#eggs as HTML
+  Rendering food/eggs.html.erb within layouts/application
+  Rendered food/eggs.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_products.html.erb (10.8ms)
+  Rendered layouts/_header.html.erb (34.2ms)
+Completed 200 OK in 601ms (Views: 573.8ms | ActiveRecord: 0.0ms)
+
+

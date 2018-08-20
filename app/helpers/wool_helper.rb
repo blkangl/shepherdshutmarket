@@ -1,0 +1,2 @@
+module WoolHelper
+end

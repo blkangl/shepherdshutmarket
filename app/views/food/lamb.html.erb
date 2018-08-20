@@ -1,0 +1,42 @@
+  <div class="row"><div class="col-12"><h2>Lamb</h2></div></div>
+
+  <div class="row">
+    <div class="col-6">
+      <img src="https://shepherdshutmarket.com/images/products/lamb.png" alt="" class="productimg"/><br/>
+      <strong>Our lamb is grown in NH by Jeff Keyser.</strong><br/> 
+      <ul>
+        <li>Hormone and antibiotic free</li>
+        <li>Fresh frozen and packaged at the butcher</li>
+        <li>Sausage and ground lamb are bulk packaged at approximately 1 lb. per package</li>
+        <li>Chops generally come 2 or 4 to  package</li>
+      </ul>  
+      We don’t always have lamb going to the butcher, so Special orders appreciated at least <i>3 months</i> in advance
+    </div>
+
+    <div class="col-6">
+      <div class="product-info">
+        <table class="table table-bordered table-striped">
+          <tr>
+            <th>Type</th>
+            <th>Price</th>
+          </tr>
+
+          <% @products['Food Products']['Lamb']['products'].each do |p| %>
+            <tr>
+              <td><%= p['name'] %></td>
+              <td><%= p['price'] %></td>
+            </tr>
+          <% end %>
+
+        </table>
+
+        <p style="color:red"><strong>Prices are subject to change without notice.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <p><center>American Lamb Council provides us with free recipes and cooking information about lamb.</center></p>
+    </div>
+  </div>
