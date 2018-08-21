@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'about/team'
+
+  get 'welcome/index'
+
   get 'food/lamb'
 
   get 'food/eggs'

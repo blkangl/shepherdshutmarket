@@ -1,2 +1,33 @@
-<h1>Food#eggs</h1>
-<p>Find me in app/views/food/eggs.html.erb</p>
+  <div class="row"><div class="col-12"><h2>Eggs</h2></div></div>
+  
+  <div class="row">
+    <div class="col-6">
+      <img src="https://shepherdshutmarket.com/images/products/eggs.png" alt="" class="productimg"/><br/>
+      <ul>
+        <li>Fresh local brown eggs from uncaged chickens</li>
+        <li>Washed and packaged regularly</li>
+        <li>Most every day we package 5-6 dozen eggs</li>
+      </ul>
+    </div>
+
+    <div class="col-6">
+      <div class="product-info">
+        <table class="table table-bordered table-striped">
+          <tr>
+            <th>Type</th>
+            <th>Price</th>
+          </tr>
+
+          <% @products['Food Products']['Eggs']['products'].each do |p| %>
+            <tr>
+              <td><%= p['name'] %></td>
+              <td><%= p['price'] %></td>
+            </tr>
+          <% end %>
+
+        </table>
+
+        <p style="color:red"><strong>Prices are subject to change without notice.</strong></p>
+      </div>
+    </div>
+  </div>

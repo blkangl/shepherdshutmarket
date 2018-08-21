@@ -6,7 +6,6 @@
 
   "food" : [
     { "name" : "Lamb", "path" : "/food/lamb" },
-    { "name" : "Eggs", "path" : "/food/eggs" },
-    { "name" : "Maple Syrup", "path" : "/food/maplesyrup" }
+    { "name" : "Eggs", "path" : "/food/eggs" }
   ]
 }

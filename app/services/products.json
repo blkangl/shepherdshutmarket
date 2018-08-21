@@ -17,6 +17,15 @@
         { "name" : "Shoulder Roast", "price" : "$10.50/lb" },
         { "name" : "Stew Meat", "price" : "$11.00/lb" }
       ]
+    },
+    "Eggs" : {
+      "image" : "https://shepherdshutmarket.com/images/products/eggs.png",
+      "products" : [
+        { "name" : "Meduim",  "price" : "$3.25/dozen" },
+        { "name" : "Large",   "price" : "$3.50/dozen" },
+        { "name" : "X-Large", "price" : "$3.75/dozen" },
+        { "name" : "Jumbo",   "price" : "$4.00/dozen" }
+      ]
     }
   },
 
